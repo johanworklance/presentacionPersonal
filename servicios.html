@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>JOHAN | Servicios</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <!--carga de fuentes-->
+    <link rel="stylesheet" href="fonts/OpenSans-Regular.ttf" type="text/css" >
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+   
+    <!--    carga de archivos css-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    
+    
+</head>
+
+<body class="paginas-internas"><!--con este diferenciaremos en el css a las paginas que no sean el index-->
+  
+   <section class="bienvenida" id="encabezado">
+       <header class="encabezado navbar-fixed-top" role="banner"> <!--el role banner indica encabezado-->
+          <div class="container">
+           <a href="index.html" class="logo"><!--los logos siempre son enlaces-->
+           <img src="images/logo.svg" alt="Logo del sitio">
+           </a>
+           
+           <button type="button" class="boton-menu hidden-md-up" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></button><!--para el colapso del menu agregamos data toggle el target que aqui es el id del nav y el aria-expanded, con el boton aparecera el menu principal-->
+           <nav id="menu-principal" class="collapse"><!--la clase collapse es requerida para el colapso del menu, es como un hidden, se esconde-->
+               <ul>
+                   <li ><a href="index.html">Inicio</a></li>
+                   <li ><a href="presentacion.html">Presentacion</a></li>
+                   <li class="active"><a href="servicios.html">Servicios</a></li>
+                   <li><a href="contacto.html">Contacto</a></li>
+               </ul>
+           </nav>
+           </div>
+       </header>
+       <div class="texto-encabezado text-xs-center"><!--sirve para centrar texto en bootstrap-->
+          <div class="container">
+           <h1 class="display-4 wow bounceIn">Servicios</h1><!--display 4 es un texto llamativo de bootstrap-->
+           <p class="wow bounceIn" data-wow-delay=".3s">Diseño APPS para la gente buena</p>
+           
+           </div>
+       </div>
+       
+   </section>
+   <section class="ruta text-xs-right p-y-1">
+       <div class="container">
+           <div class="row">
+               <div class="col-xs-12">
+                   <a href="index.html">Inicio </a>>> Servicios
+               </div>
+           </div>
+       </div>
+   </section>
+   
+   <main class="p-y-1 lista-servicios" >
+     <div class="container">
+         <div class="row">
+             <div class="col-md-4 text-xs-center">
+                 <article class="item-servicios">
+                    <i class="fa fa-bullseye" aria-hidden="true"></i>
+                    <h4>Desarrollo de aplicaciones web</h4>
+                    <p>Desarrollo plataformas web. Mi principal cualidad está en el desarrollo de software a medida de tus necesidades.</p>
+                    <a href="#" class="btn btn-secondary " data-toggle="modal" data-target="#servicio1">Más info...</a>
+                </article>
+            </div>
+            <div class="col-md-4 text-xs-center">
+                <article class="item-servicios">
+                    <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                    <h4>Consultoría Tecnológica</h4>
+                    <p>Ofrezco consultoría tecnológica especializada en movilidad, necesaria previo al desarrollo de cualquier proyecto.</p>
+                    <a href="#" class="btn btn-secondary "data-toggle="modal" data-target="#servicio2">Más info...</a>
+                </article>
+            </div>
+            <div class="col-md-4 text-xs-center">
+                <article class="item-servicios">
+                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    <h4>Mercadotecnia y publicidad</h4>
+                    <p>Desarrollo campañas publicitarias para tus APP. Hago conocer tu marca en el momento exacto para conseguir un mayor inpacto.</p>
+                    <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#servicio3">Más info...</a>
+                </article>
+             </div>
+         </div>
+     </div>
+      
+       
+   </main>
+   
+   
+    
+    <footer class="piedepagina p-y-1 text-xs-center" role="contentinfo">
+       <div class="container">
+        <p>2018 © JOHAN Todos los derechos reservados</p>
+        </div>
+    </footer>
+    
+    <a href="#encabezado" data-scroll class="ir-arriba" title="Ir arriba"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+    
+    <!-- Modal 1  -->
+    <div class="modal fade" id="servicio1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document"><!--modal-lg que sea grande sm es para pequeña-->
+            <div class="modal-content"><!--el hace las veces de un .container-->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Desarrollo de Aplicaciones Mobiles</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row"><!--aqui la fila y abajo las columnas-->
+
+                        <div class="col-md-8">
+                            En proceso...
+                        </div>
+
+                        <div class="col-md-4">
+                            <img src="images/servicio-1.svg" alt="" width="200" class="img-fluid m-x-auto"> <!--img-fluid es una clase de boostrap para imagenes responsive y m-x-auto es como p-y-1 solo que es margen-en el eje xd es decir marginlef y right, y auto que lo calcule solo, que se centre-->
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+   <!-- Modal 2  -->
+    <div class="modal fade" id="servicio2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Consultoría Tecnológica</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row"><!--aqui la fila y abajo las columnas-->
+
+                        <div class="col-md-8">
+                            En proceso...
+                        </div>
+
+                        <div class="col-md-4">
+                            <img src="images/servicio-2.svg" alt="" width="200" class="img-fluid m-x-auto">
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 3  -->
+    <div class="modal fade" id="servicio3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Mercadotecnia y publicidad</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row"><!--aqui la fila y abajo las columnas-->
+
+                        <div class="col-md-8">
+                            En proceso...
+                        </div>
+
+                        <div class="col-md-4">
+                            <img src="images/servicio-3.svg" alt="" width="200" class="img-fluid m-x-auto">
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <!--carga de scripts-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/sitio.js"></script>
+    
+</body>
+</html>

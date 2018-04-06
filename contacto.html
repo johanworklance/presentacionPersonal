@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>JOHAN | Contacto</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <!--carga de fuentes-->
+    <link rel="stylesheet" href="fonts/OpenSans-Regular.ttf" type="text/css" >
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+   
+    <!--    carga de archivos css-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    
+    
+</head>
+
+<body class="paginas-internas"><!--con este diferenciaremos en el css a las paginas que no sean el index-->
+  
+   <section class="bienvenida" id="encabezado">
+       <header class="encabezado navbar-fixed-top" role="banner"> <!--el role banner indica encabezado-->
+          <div class="container">
+           <a href="index.html" class="logo"><!--los logos siempre son enlaces-->
+           <img src="images/logo.svg" alt="Logo del sitio">
+           </a>
+           
+           <button type="button" class="boton-menu hidden-md-up" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></button><!--para el colapso del menu agregamos data toggle el target que aqui es el id del nav y el aria-expanded, con el boton aparecera el menu principal-->
+           <nav id="menu-principal" class="collapse"><!--la clase collapse es requerida para el colapso del menu, es como un hidden, se esconde-->
+               <ul>
+                   <li><a href="index.html">Inicio</a></li>
+                   <li><a href="presentacion.html">Presentacion</a></li>
+                   <li><a href="servicios.html">Servicios</a></li>
+                   <li class="active"><a href="contacto.html">Contacto</a></li>
+               </ul>
+           </nav>
+           </div>
+       </header>
+       <div class="texto-encabezado text-xs-center"><!--sirve para centrar texto en bootstrap-->
+          <div class="container">
+           <h1 class="display-4 wow bounceIn">Contacto</h1><!--display 4 es un texto llamativo de bootstrap-->
+           <p class="wow bounceIn" data-wow-delay=".3s">Estoy listo para ayudarte</p>
+           
+           </div>
+       </div>
+       
+   </section>
+   
+   <section class="ruta text-xs-right p-y-1">
+       <div class="container">
+           <div class="row">
+               <div class="col-xs-12">
+                   <a href="index.html">Inicio </a>>> Contacto
+               </div>
+           </div>
+       </div>
+   </section>
+   
+   <main class="p-y-1">
+     <div class="container">
+         <div class="row">
+             <div class="col-md-8">
+                <h2 class="m-b-1">Formulario de contacto</h2><!--form bootstrap margin-button-1rem -->
+                 <form action="#">
+                   <div class="form-group row"><!--esta es un row de formularios-->
+                        <label for="nombre" class="col-form-label col-md-4">Nombre</label><!--el label se lleva una parte de las columnas-->
+                        <div class="col-md-8"><!--los otros campos si nitan un div para llevarse las otras columnas segun la documentacion-->
+                            <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Ingresa tu Nombre" data-toggle="tooltip" data-placement="top" title="Ingrese su nombre completo">
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                        <label for="email" class="col-form-label col-md-4">Email</label>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" id="email" name="email" placeholder="Ingresa tu Email" data-toggle="tooltip" data-placement="top" title="Ingrese su email"><!--los ultimos 3 parametros corresponden a los tooltips los mensajes de ayuda-->
+                        </div>
+                        
+                    </div>
+                    <div class="form-group row">
+                        <label for="mensaje" class="col-form-label col-md-4">Mensaje</label>
+                        <div class="col-md-8">
+                            <textarea class="form-control" name="mensaje" id="mensaje" cols="10" rows="5" placeholder="Ingrese su Mensaje" data-toggle="tooltip" data-placement="top" title="Ingrese un mensaje"></textarea><!--no dejar espacio entre las etiquetas de textarea o no muestra bien el placeholder-->
+                        </div>
+                        
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-8 offset-md-4"> <!--offset es generar espacios en blanco para alinear los botones mas al centro, es decir estan 4 columnas despues-->
+                             <button class="btn btn-primary"type="submit">Enviar</button>
+                             <button class="btn btn-secondary"type="reset">Limpiar</button>
+                         </div>
+                     </div>
+                 </form>
+             </div>
+             <div class="col-md-4" >
+                 <h3>Detalles de contacto</h3>
+                 <p>Te contestare lo mas pronto posible, y a pronto me refiero a menos de 2 dias, no seas troll y no me envias correos basura, un saludo!</p>
+             </div>
+         </div>
+     </div>
+      
+       
+   </main>
+   
+   
+    
+    <footer class="piedepagina p-y-1 text-xs-center" role="contentinfo">
+       <div class="container">
+        <p>2018 © JOHAN Todos los derechos reservados</p>
+        </div>
+    </footer>
+    
+    <a href="#encabezado" data-scroll class="ir-arriba" title="Ir arriba"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+    
+    
+    
+    <!--carga de scripts-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/tether.min.js"></script><!--necesitamos que este antes de bootstrap para usarlos en los tooltips de formulario si no bootstrap no lo detecta-->
+    <script type="text/javascript">
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+    </script><!--y despues colocamos este script-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/sitio.js"></script>
+    
+    
+</body>
+</html>

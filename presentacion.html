@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>JOHAN | ¿Quien soy?</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <!--carga de fuentes-->
+    <link rel="stylesheet" href="fonts/OpenSans-Regular.ttf" type="text/css" >
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+   
+    <!--    carga de archivos css-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    
+    
+</head>
+
+<body class="paginas-internas"><!--con este diferenciaremos en el css a las paginas que no sean el index-->
+  
+   <section class="bienvenida" id="encabezado">
+       <header class="encabezado navbar-fixed-top" role="banner"> <!--el role banner indica encabezado-->
+          <div class="container">
+           <a href="index.html" class="logo"><!--los logos siempre son enlaces-->
+           <img src="images/logo.svg" alt="Logo del sitio">
+           </a>
+           
+           <button type="button" class="boton-menu hidden-md-up" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false"><i class="fa fa-bars" aria-hidden="true"></i></button><!--para el colapso del menu agregamos data toggle el target que aqui es el id del nav y el aria-expanded, con el boton aparecera el menu principal-->
+           <nav id="menu-principal" class="collapse"><!--la clase collapse es requerida para el colapso del menu, es como un hidden, se esconde-->
+               <ul>
+                   <li><a href="index.html">Inicio</a></li>
+                   <li class="active"><a href="presentacion.html">Presentacion</a></li>
+                   <li><a href="servicios.html">Servicios</a></li>
+                   <li><a href="contacto.html">Contacto</a></li>
+               </ul>
+           </nav>
+           </div>
+       </header>
+       <div class="texto-encabezado text-xs-center"><!--sirve para centrar texto en bootstrap-->
+          <div class="container">
+           <h1 class="display-4 wow bounceIn">Presentacion</h1><!--display 4 es un texto llamativo de bootstrap-->
+           <p class="wow bounceIn" data-wow-delay=".3s">¿Quien soy? y ¿Que hago?</p>
+           
+           </div>
+       </div>
+       
+   </section>
+   <section class="ruta text-xs-right p-y-1">
+       <div class="container">
+           <div class="row">
+               <div class="col-xs-12">
+                   <a href="index.html">Inicio </a>>> Presentacion
+               </div>
+           </div>
+       </div>
+   </section>
+   
+   <main class="p-y-1">
+      <div class="container">
+          <div class="row">
+              <article class="col-md-8"><!--si colocamos un col-md-* y los elementos en vista movil ocupan el 100% no necesitamos usar el col-xs-*-->
+                  <h2>Trabajo con dedicación</h2>
+                  
+                  <p>Hola, aunque soy novato, ya tengo algunos años de experiencia desarrollando paginas web y otras aplicaciones. Yo analizo los requerimientos de mis clientes y les entrego una exitosa pagina incluyendo la base datos con su panel de administracion realizado en php. <p>Dependiendo del proposito de la pagina, podemos considerar usar un sistema de CMS como Wordpress. Espero tu correo para iniciar esta interesante tarea.</p>
+                  
+                  <div id="accordion" role="tablist" aria-multiselectable="true"><!--asi tal cual es como el boton buscar que habia en el curso-->
+
+                        <div class="panel panel-default">
+
+                            <h4 class="panel-heading">
+                                 <a data-toggle="collapse" data-parent="#accordion" href="#tab-pido">¿QUE PIDO?</a>
+
+                            </h4>
+                            <div id="tab-pido" class="panel-collapse collapse in"><!--por tener la clase in, se mostrara por defecto-->
+                                <ol>
+                                    <li>Tu logo</li>
+                                    <li>Tu contenido, textos e imagenes</li>
+                                    <li>Links a tus redes sociales</li>
+                                    <li>Acceso a tu servidor (sólo si deseas que lo publique)</li>
+                                </ol>
+                            </div>
+                        </div><!--primer tab-->
+
+
+                        <div class="panel panel-default">
+                            <h4 class="panel-heading">
+                               
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#tab-recibes" >¿QUE RECIBES?</a>
+     
+                            </h4>
+                            <div id="tab-recibes" class="panel-collapse collapse">
+                                <ol>
+                                    <li>Desarrollo en HTML</li>
+                                    <li>Creación Hojas de estilo (css) y scripts (javascript y/o jQuery)</li>
+                                    <li>El diseño tomando en cuanto la plantilla básica de Bootstrap y los colores de tu marca</li>
+                                    <li>Formulario de contacto en PHP</li>
+                                </ol>
+                            </div>
+                        </div><!--segundo tab-->
+                    </div>
+                  
+                  
+                  
+              </article> 
+              <aside class="col-md-4 text-xs-center">
+                  <img src="images/muchacho.svg" alt="presentacion">
+              </aside>
+          </div>
+      </div>
+       
+   </main>
+   
+   
+    
+    <footer class="piedepagina p-y-1 text-xs-center" role="contentinfo">
+       <div class="container">
+        <p>2018 © JOHAN Todos los derechos reservados</p>
+        </div>
+    </footer>
+    
+    <a href="#encabezado" data-scroll class="ir-arriba" title="Ir arriba"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></a>
+    <!--carga de scripts-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/sitio.js"></script>
+</body>
+</html>

@@ -1,0 +1,511 @@
+//-----------------------------
+//PATRON DE COLORES
+//-----------------------------
+
+$texto:#191919;
+$principal:#3A0CB1;
+$secundario:#7A05AC;
+
+html{
+    font-size: 15px;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: $texto;
+}
+
+.bienvenida {
+    background: url(../images/fondo-encabezado.jpg) no-repeat center top;/*que no se repita se centre y se dibuje desde arriba*/
+    color: white;/*si no colocaba el color la imagen de fondo me ponia las letras negras*/
+    background-size: cover;/*coloca la imagen bonita como cubriendo toda la section*/
+    background-attachment: fixed !important;/*pequeño efecto parallax le ponemos important por que el background es un shorthand y tambien estaba esperando este atributo attachment*/
+    height: 100vh;/*viewport height todo el alto del dispositivo*/
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.encabezado{
+    background-color: $texto;
+    color: #fff;
+    padding: 0.5rem 0;
+    transition: all .5s ease;/*es un cambio de propiedad a propiedad*/
+}
+ 
+
+//estilos para el encabezado animado es decir cuando se hace scroll y gana la clase fondo-menu-----------------------------------------------------------------
+.fondo-menu{
+    background-color: #6f6e71;
+    padding: 1rem 0;
+}
+
+//-------------------------------------------------------------------
+
+.encabezado .container{
+    display: flex;
+    
+    flex-wrap: wrap; /*para salten de linea si no caben*/
+    align-items: center; /*alinea los elementos en el eje secundario*/
+}
+.encabezado .container .logo img{
+    width: 130px;
+    height: auto;
+}
+/*estilos para el boton menu*/
+.boton-menu{
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0 .5rem;
+    color: #fff;
+    font-size: 2rem;
+    margin-left: auto;
+}
+.boton-menu:focus{
+    outline: 0;
+}
+.boton-menu:hover{
+    color: $principal;
+}
+#menu-principal{
+    flex: 1 1 100%;
+}
+#menu-principal ul {
+    padding: 0;
+    list-style: none;
+    margin: 1rem 0 0 0;
+}
+#menu-principal ul a {
+    display: block;
+    text-align: center;
+    border-top: 1px solid #938787;
+    padding: 0.8rem 0;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;/*que no haya un subrayado*/
+}
+#menu-principal ul a:hover,
+#menu-principal ul li.active a{/*el enlace a cambia si su li tiene la clase active*/
+    color:$principal; 
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: $principal;
+    border-color: transparent;
+    
+    transition: all 1s ease;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active:hover {
+    background-color: $secundario;
+    border-color: transparent;
+}
+.texto-encabezado {
+    flex: 1 1 auto;/*con el auto toma todo el espacio disponible que hay entre el y el boton bajar, la cabezera no la toma en cuenta ya que esta fixed*/
+    display: flex;
+    align-items: center;
+}
+.texto-encabezado .display-4{
+    margin-top: 4rem;
+}
+.texto-encabezado .btn-primary{
+    margin-top: 1rem;
+}
+
+
+.boton-bajar a {
+    color: white;
+    font-size: 4rem;
+    display: inline-block;
+    animation: flecha-animacion 2s ease-in-out infinite;/*propiedad donde indicamos la animacion como si fuera un metodo de programacion, 2 segundos y como sera aqui ease-in-out, y infinite para que sea ...*/
+    
+}
+
+
+
+
+@keyframes flecha-animacion{/*asi se hacen las animacions de un punto a otro y varios metodos*/
+    from{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(6px);
+    }
+    to{
+        transform: translateY(0);
+    }
+    
+}
+
+//-----------------------------
+//section hola
+//-----------------------------
+
+
+.hola{
+    background-color: $principal;
+    color: #fff;
+}
+.hola img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+//-----------------------------
+//section eleccion
+//-----------------------------
+.eleccion h2 span{
+    color: $principal;
+}
+.eleccion .row img {
+    width: 100%;
+    
+}
+.eleccion ul{
+    list-style: none;
+}
+
+.eleccion ul li .fa{
+    
+    background: $secundario;
+    color: #fff;
+    border-radius: 50%;
+    width: 4.7rem;
+    height: 4.7rem;/*circulo perfecto esas 3 propiedades border, with y height*/ 
+    line-height: 4.7rem;/*con este alineamos el icono al centro*/
+    font-size: 2.3rem;
+}
+.eleccion ul li{
+    min-height: 9rem;
+}
+.eleccion ul li .contenedor-eleccion h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: .8rem;
+}
+
+//-----------------------------
+//section servicios
+//-----------------------------
+
+.servicios{
+    background: url("../images/fondo-servicios.jpg") no-repeat center top;
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed !important;
+}
+
+.servicios article {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.servicios img{
+    flex: 0 0 60px;/*que no crezca 0 ni se encojan que por svg se ponen mal*/
+    overflow: hidden;/*no se por que se coloca pero para imagenes svg se usa*/
+    margin-right: 1rem;
+    height: 60px;
+}
+.servicios h3{
+    flex: 1 1 auto;
+    margin: 0;
+    font-size: 1.1rem;
+}
+.servicios h3 a{
+    color: #fff;
+    display: flex;/*el texto y el after son elementos hijos flexibles anonimos para el enlace a*/
+    justify-content: space-between; /*asi logramos que el texto y la flechita se separen*/
+    text-decoration: none;
+    align-items: center;
+}
+
+.servicios h3 a::after{ /*aqui colocamos la flecha*/
+    content: "\f054";/*aqui colocamos el unicode correspondiente al icono que queremos usar*/
+    font-family: FontAwesome;/*y la fuente*/
+    font-size: 2rem;
+    margin-left: 1rem;
+    opacity: .5;/*trasnparencia*/
+    position: relative;/*si colocamos relative, nunca cambiara de posicion, podremos hacer que le quite 10px al h3 que esta auto y asi hacer la animacion en el hover, es decir podemos usar caracteristicas como left*/
+    left: 0px;/*inicializamos la posicion*/
+    transition: all 0.5s ease;
+}
+
+.servicios h3 a:hover::after{ /*cuando el enlace esta en estado hover modificamos after*/
+    left: -1rem;/*nos movemos -10px a la izquierda*/
+    color: $principal;
+    opacity: 1;
+}
+
+//-----------------------------
+//section ultimos-proyectos
+//-----------------------------
+
+.ultimos-proyectos a{
+    text-decoration: none;
+    color: $texto;
+}
+.utimos-proyectos a h4{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.ultimos-proyectos .container{
+    padding: 0;
+}
+
+
+.ultimos-proyectos .owl-nav {/*esta clase owl-nav la genera el script carousel*/
+    display: flex;
+    margin: 0.3rem 0;
+    justify-content: center;
+    font-size: 3rem;
+    color: $principal;
+}
+.ultimos-proyectos .owl-nav .fa{/*los 2 iconos son de la clase fa de font awesome*/
+    margin: 0.5rem;
+    transition: all 0.5s ease;
+}
+.ultimos-proyectos .owl-nav .fa:hover{
+    
+   color: $secundario;
+    
+}
+
+//-----------------------------
+//section piedepagina
+//-----------------------------
+
+.piedepagina{
+    background: $texto;
+    color: #fff;
+    font-size: 0.9rem;
+}
+.ir-arriba{
+    position: fixed;/*para que quede fija y se posicione deacuerdo a los parametros de abajo*/
+    bottom: 1rem;/*desde abajo de la ventana*/
+    right: 1rem;/*a la derecha de la ventana*/
+    font-size: 3rem;
+    text-decoration: none;
+    z-index: 99999;/*para que siempre este por encima de todo elemento de la pagina*/
+    color: $principal;
+    transition: all 0.5s ease;
+    line-height: 0;/*quitamos un espacio que coloca el navegador a textos*/
+    display: none;/*para que el script sea el que lo muestre con fadeIn*/
+
+}
+.ir-arriba:hover,
+ir-arriba:focus{
+    outline: 0;/*es para que no salga un marco raro cuando se le clickea*/
+    text-decoration: none;
+    color: #23066D;
+    
+}
+
+//-----------------------------
+//estilos presentacion.html
+//-----------------------------
+
+.paginas-internas .bienvenida{
+    height: 50vh;/*recordar ahora medira la mitad del dispositivo*/
+}
+
+.paginas-internas .ruta{
+    background-color: $principal;
+    color: #fff; 
+}
+.paginas-internas .ruta a{
+    text-decoration: underline;
+    color: #fff;
+}
+.paginas-internas .ruta a:hover{
+    text-decoration: none;
+    
+}
+.paginas-internas .panel-heading a{
+    background: $principal;
+    color: #fff;
+    display: block;
+    padding: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+.paginas-internas .panel-heading a:hover{
+    background: $secundario;
+}
+
+//-----------------------------
+//estilos servicios.html
+//-----------------------------
+.paginas-internas .lista-servicios{
+    background: #23066D;
+}
+.paginas-internas .lista-servicios .item-servicios{
+    background: #fff;
+    border: 5px solid #845ee5;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+.paginas-internas .lista-servicios .item-servicios .btn{
+    background: $principal;
+    color: #fff;
+}
+.paginas-internas .lista-servicios .item-servicios .fa{
+    font-size: 6rem;
+    color: $principal;
+    margin-bottom: 1rem;
+    transition: all 1s ease;
+}
+
+    
+.paginas-internas .lista-servicios .item-servicios:hover .fa{
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+}
+
+/*-------------------------------------------
+            media queries
+-------------------------------------------*/
+
+@media (max-width:480px){
+.bienvenida{
+    height: auto;
+}
+}
+
+
+
+@media (min-width: 768px){
+    
+    #menu-principal{
+        display: block;/*con la clase collapse bootstrap le da display none y el height en 0 px*/
+        height: auto !important;/*aqui locambiamos para que se vea*/
+        flex: 0 1 auto;/*que no crezca y su tamaño sea su contenido es decir los enlaces*/
+        margin-left: auto;
+        
+        
+    }
+    #menu-principal ul{
+        display: flex;/*para que los li sean horizontales*/
+        margin: 0;
+    }
+    #menu-principal ul a{
+        text-transform: capitalize;
+        margin:0 0.3rem;
+        border-bottom: 4px solid transparent;/*esto es por problemas con internet explorer*/
+        border-top: 0;
+        padding: .8rem;
+        transition: all 1s ease;
+    }
+    #menu-principal ul li.active a,
+    #menu-principal ul li a:hover{
+        border-bottom: 4px solid $principal;
+        
+    }
+    
+    
+    
+    /*servicios*/
+    
+    
+    .servicios h3 a::after{
+        display: none;
+    }
+    .servicios article {
+    flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
+    }
+    .servicios img{
+    flex: 0 0 150px;/*que no crezca 0 ni se encojan que por svg se ponen mal*/
+    overflow:hidden;/*no se por que se coloca pero para imagenes svg se usa*/
+    margin-right: 0;
+    height: 150px;
+    margin-bottom: 1rem;
+    transition: all 1s ease;
+    }
+    .servicios article:hover img{/*con estas propiedades, y cuando estemos encima del article la imagen se movera*/
+        transform: rotateY(360deg);
+        transform-style: preserve-3d;
+    }
+    .servicios h3{
+        flex: 0 1 auto;
+        margin:0 0 .5rem 0;
+        font-size: 1.5rem;
+        min-height: 3rem;/*por si los titulos ocupaban 2 lineas*/
+    }
+    .servicios h3 a{
+        width: 100%;
+        display: block;/*hacemos lo de cambiar de inline a block y width100% por un problema en internet explorer*/
+    }
+    .servicios p{
+        width: 100%;/*igual problema de interrnet explorer, si el elemento es en linea lo pasamos a block y 100%*/
+    }
+    .servicios .btn-secondary{
+        margin-top: auto;
+    }
+    
+    /*pagina servicios.html*/
+    
+    .lista-servicios .col-md-4{
+        display: flex; /*con esto el article tendra el 100% de altura del div*/
+    }
+    .lista-servicios .item-servicios{
+        display: flex;
+        flex-direction: column;
+    }
+    .lista-servicios .item-servicios .btn{
+        margin-top: auto;
+    }
+    
+    
+}
+
+@media (min-width:992px){
+    html{
+        font-size: 16px;
+    }
+    .eleccion ul li{
+        display: flex;
+    }
+    .eleccion ul li .fa{
+        flex: 0 1 auto;
+        margin: 0 1rem;
+        transition: all 1s ease;
+         
+        
+    }
+    .eleccion ul li .contenedor-eleccion{
+        flex: 1 0 0px;
+    }
+    .eleccion ul li .contenedor-eleccion h4{
+        margin-top: 0;
+        font-size: 1rem;
+    }
+    .eleccion ul:first-child .fa{
+        order: 1;
+    }
+    .eleccion ul li p{
+        font-size: .85rem;
+    }
+    .eleccion ul li:hover .fa{
+        transform: rotateY(360deg);
+        transform-style: preserve-3d;
+        background-color: $principal;
+    }
+    .bienvenida {
+        background: url(../images/fondo-encabezado-grande.jpg) no-repeat center top;
+        background-size: cover;
+    }
+    .servicios{
+    background: url("../images/fondo-servicios-lg_07.jpg") no-repeat center top;
+    background-size: cover;
+    
+}
+}
+
